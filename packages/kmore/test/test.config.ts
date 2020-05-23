@@ -13,12 +13,12 @@ export const config: Config = {
     user: process.env.PGUSER ? process.env.PGUSER : 'postgres',
     password: process.env.PGPASSWORD ? process.env.PGPASSWORD : '',
     database: 'db_ci_test',
-    requestTimeout: 10000,
+    requestTimeout: 20000,
   },
-  acquireConnectionTimeout: 10000,
+  acquireConnectionTimeout: 20000,
   asyncStackTraces: false,
   debug: false,
-  pool: { min: 2, max: 10 },
+  pool: { min: 2, max: 50 },
 }
 
 // for demo
