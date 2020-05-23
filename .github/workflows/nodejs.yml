@@ -19,7 +19,9 @@ jobs:
       - name: npm install, build, and test
         run: |
           openssl version
-          npm i -g lerna
+          npm i -g lerna typescript ts-node
+          tsc -v
+          ts-node -v
           npm run bootstrap
           npm run build --if-present
           npm run lint:nofix
